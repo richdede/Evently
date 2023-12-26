@@ -1,9 +1,9 @@
-"use client";
+"use client"
 
-import * as React from "react";
-import * as SeparatorPrimitive from "@radix-ui/react-separator";
+import * as React from "react"
+import * as SeparatorPrimitive from "@radix-ui/react-separator"
 
-import { cn } from "@/lib/utils";
+import { cn } from "@/lib/utils"
 
 const Separator = React.forwardRef<
   React.ElementRef<typeof SeparatorPrimitive.Root>,
@@ -18,16 +18,14 @@ const Separator = React.forwardRef<
       decorative={decorative}
       orientation={orientation}
       className={cn(
-        "tailwind.config.tsshrink-0 tailwind.config.tsbg-border",
-        orientation === "horizontal"
-          ? "tailwind.config.tsh-[1px] tailwind.config.tsw-full"
-          : "tailwind.config.tsh-full tailwind.config.tsw-[1px]",
+        "shrink-0 bg-border",
+        orientation === "horizontal" ? "h-[1px] w-full" : "h-full w-[1px]",
         className
       )}
       {...props}
     />
   )
-);
-Separator.displayName = SeparatorPrimitive.Root.displayName;
+)
+Separator.displayName = SeparatorPrimitive.Root.displayName
 
-export { Separator };
+export { Separator }
